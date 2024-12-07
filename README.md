@@ -55,6 +55,8 @@ Figure -02 HALF Subtractor
 
 **Program:**
 
+HALF ADDER:
+
 module halfadd(a,b,sum,cout);
 
 input a,b;
@@ -66,6 +68,26 @@ xor (sum,a,b);
 and (cout,a,b);
 
 endmodule
+
+HALF SUBRACTOR:
+
+module halfsub(a,b,diff,borr);
+
+input a,b;
+
+output diff,borr;
+
+wire w1;
+
+xor g1(diff,a,b);
+
+not g2(w1,a);
+
+and g3(borr,w1,b);
+
+endmodule
+
+
 
 
 
